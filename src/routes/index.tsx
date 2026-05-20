@@ -10,25 +10,23 @@ export const Route = createFileRoute("/")({
 
 function Nav() {
   return (
-    <header className="fixed top-0 inset-x-0 z-50">
-      <div className="mx-auto mt-4 max-w-7xl px-4">
-        <div className="glass rounded-full px-6 py-3 flex items-center justify-between">
-          <a href="#top" className="flex items-center gap-2">
-            <div className="h-8 w-8 rounded-full bg-gradient-primary grid place-items-center shadow-glow">
-              <Dna className="h-4 w-4 text-primary-foreground" />
-            </div>
-            <span className="font-display text-xl tracking-wide">GENOMA</span>
-          </a>
-          <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
-            <a href="#protocolos" className="hover:text-foreground transition">Protocolos</a>
-            <a href="#ciencia" className="hover:text-foreground transition">Ciência</a>
-            <a href="#processo" className="hover:text-foreground transition">Processo</a>
-            <a href="#planos" className="hover:text-foreground transition">Planos</a>
-          </nav>
-          <a href="#planos" className="rounded-full bg-gradient-primary px-5 py-2 text-sm font-medium text-primary-foreground shadow-glow hover:shadow-gold transition">
-            Agendar análise
-          </a>
-        </div>
+    <header className="sticky top-0 inset-x-0 z-50 border-b border-border bg-background/80 backdrop-blur">
+      <div className="mx-auto max-w-7xl px-6 h-16 flex items-center justify-between">
+        <a href="#top" className="flex items-center gap-2.5">
+          <div className="h-8 w-8 rounded-lg bg-primary grid place-items-center">
+            <Dna className="h-4 w-4 text-primary-foreground" />
+          </div>
+          <span className="font-display font-semibold text-lg tracking-tight">GENOMA</span>
+        </a>
+        <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
+          <a href="#protocolos" className="hover:text-foreground transition-colors">Protocolos</a>
+          <a href="#ciencia" className="hover:text-foreground transition-colors">Ciência</a>
+          <a href="#processo" className="hover:text-foreground transition-colors">Processo</a>
+          <a href="#planos" className="hover:text-foreground transition-colors">Planos</a>
+        </nav>
+        <a href="#planos" className="inline-flex items-center gap-1.5 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors">
+          Agendar análise
+        </a>
       </div>
     </header>
   );
@@ -36,52 +34,51 @@ function Nav() {
 
 function Hero() {
   return (
-    <section id="top" className="relative min-h-screen overflow-hidden bg-hero pt-32">
-      <div className="absolute inset-0 grid-bg opacity-40 pointer-events-none" />
-      <div className="mx-auto max-w-7xl px-6 pt-20 pb-32 grid lg:grid-cols-12 gap-12 items-center relative">
+    <section id="top" className="relative overflow-hidden">
+      <div className="absolute inset-0 grid-bg pointer-events-none" />
+      <div className="relative mx-auto max-w-7xl px-6 pt-24 pb-24 lg:pt-32 lg:pb-32 grid lg:grid-cols-12 gap-16 items-center">
         <div className="lg:col-span-7 space-y-8">
-          <div className="inline-flex items-center gap-2 rounded-full glass px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-muted-foreground">
-            <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
+          <div className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary px-3 py-1 text-xs font-medium text-muted-foreground">
+            <span className="h-1.5 w-1.5 rounded-full bg-primary" />
             Genética de precisão — 2026
           </div>
-          <h1 className="font-display text-6xl md:text-7xl lg:text-8xl leading-[0.95] tracking-tight">
-            Sua genética. <br />
-            <span className="text-gradient italic">Seu protocolo.</span>
+          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-semibold leading-[1.05] tracking-tight">
+            Sua genética.<br />
+            <span className="text-gradient">Seu protocolo.</span>
           </h1>
           <p className="text-lg text-muted-foreground max-w-xl leading-relaxed">
             Identificamos os genes que regulam seu metabolismo, sua estética e sua performance.
             Cada protocolo é desenhado a partir do que está escrito no seu DNA — não em um manual genérico.
           </p>
-          <div className="flex flex-wrap gap-4 pt-2">
-            <a href="#planos" className="group inline-flex items-center gap-2 rounded-full bg-gradient-primary px-7 py-3.5 font-medium text-primary-foreground shadow-glow hover:shadow-gold transition">
+          <div className="flex flex-wrap gap-3 pt-1">
+            <a href="#planos" className="group inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors shadow-primary">
               Iniciar minha análise
-              <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition" />
+              <ArrowRight className="h-4 w-4 group-hover:translate-x-0.5 transition-transform" />
             </a>
-            <a href="#ciencia" className="inline-flex items-center gap-2 rounded-full glass px-7 py-3.5 font-medium hover:border-primary/40 transition">
+            <a href="#ciencia" className="inline-flex items-center gap-2 rounded-lg border border-border bg-background px-5 py-3 text-sm font-medium hover:bg-secondary transition-colors">
               Como funciona
             </a>
           </div>
-          <div className="flex flex-wrap items-center gap-8 pt-8 text-sm text-muted-foreground">
-            <div><span className="text-foreground font-semibold text-2xl font-display">+120</span> marcadores</div>
-            <div className="h-8 w-px bg-border" />
-            <div><span className="text-foreground font-semibold text-2xl font-display">98%</span> precisão</div>
-            <div className="h-8 w-px bg-border" />
-            <div><span className="text-foreground font-semibold text-2xl font-display">14d</span> de resultado</div>
+          <div className="flex flex-wrap items-center gap-8 pt-6 text-sm text-muted-foreground">
+            <div><div className="text-foreground font-display font-semibold text-2xl">+120</div>marcadores</div>
+            <div className="h-10 w-px bg-border" />
+            <div><div className="text-foreground font-display font-semibold text-2xl">98%</div>precisão</div>
+            <div className="h-10 w-px bg-border" />
+            <div><div className="text-foreground font-display font-semibold text-2xl">14d</div>de resultado</div>
           </div>
         </div>
         <div className="lg:col-span-5 relative">
-          <div className="absolute -inset-10 bg-primary/10 blur-3xl rounded-full" />
           <img
             src={heroDna}
-            alt="Hélice de DNA dourada e esmeralda"
+            alt="Hélice de DNA"
             width={1536}
             height={1280}
-            className="relative rounded-3xl shadow-glow animate-float border border-primary/20"
+            className="relative rounded-2xl border border-border shadow-elevated"
           />
-          <div className="absolute -bottom-6 -left-6 glass rounded-2xl p-4 shadow-glow max-w-[220px]">
-            <div className="text-xs uppercase tracking-widest text-muted-foreground">Gene FTO</div>
-            <div className="font-display text-2xl mt-1">Variante AA</div>
-            <div className="text-xs text-primary mt-1">Predisposição a acúmulo de gordura visceral</div>
+          <div className="absolute -bottom-5 -left-5 rounded-xl border border-border bg-background p-4 shadow-elevated max-w-[240px]">
+            <div className="text-[10px] font-mono uppercase tracking-widest text-muted-foreground">Gene FTO</div>
+            <div className="font-display font-semibold text-xl mt-1">Variante AA</div>
+            <div className="text-xs text-primary mt-1">Predisposição a gordura visceral</div>
           </div>
         </div>
       </div>
@@ -90,46 +87,32 @@ function Hero() {
 }
 
 const protocolos = [
-  {
-    icon: Sparkles,
-    title: "Estética",
-    desc: "Genes de colágeno, elastina e estresse oxidativo. Protocolos para pele, cabelo e celulite alinhados ao seu DNA.",
-    tags: ["MMP1", "COL1A1", "SOD2"],
-  },
-  {
-    icon: Flame,
-    title: "Emagrecimento",
-    desc: "Mapeamos metabolismo de gorduras, resposta à insulina e saciedade para um plano alimentar verdadeiramente seu.",
-    tags: ["FTO", "MC4R", "PPARG"],
-  },
-  {
-    icon: Activity,
-    title: "Performance",
-    desc: "Tipo de fibra muscular, recuperação, VO₂ e risco de lesão. Treino prescrito pela sua biologia.",
-    tags: ["ACTN3", "ACE", "IL6"],
-  },
+  { icon: Sparkles, title: "Estética", desc: "Genes de colágeno, elastina e estresse oxidativo. Protocolos para pele, cabelo e celulite alinhados ao seu DNA.", tags: ["MMP1", "COL1A1", "SOD2"] },
+  { icon: Flame, title: "Emagrecimento", desc: "Mapeamos metabolismo de gorduras, resposta à insulina e saciedade para um plano alimentar verdadeiramente seu.", tags: ["FTO", "MC4R", "PPARG"] },
+  { icon: Activity, title: "Performance", desc: "Tipo de fibra muscular, recuperação, VO₂ e risco de lesão. Treino prescrito pela sua biologia.", tags: ["ACTN3", "ACE", "IL6"] },
 ];
 
 function Protocolos() {
   return (
-    <section id="protocolos" className="relative py-32">
+    <section id="protocolos" className="py-24 lg:py-32 border-t border-border">
       <div className="mx-auto max-w-7xl px-6">
         <div className="max-w-2xl mb-16">
-          <div className="text-xs uppercase tracking-[0.25em] text-primary mb-4">Três frentes. Um DNA.</div>
-          <h2 className="font-display text-5xl md:text-6xl leading-tight">
-            Protocolos escritos no <span className="text-gradient italic">seu código</span>.
+          <div className="text-xs font-medium uppercase tracking-[0.2em] text-primary mb-4">Três frentes. Um DNA.</div>
+          <h2 className="font-display text-4xl md:text-5xl font-semibold leading-tight tracking-tight">
+            Protocolos escritos no <span className="text-gradient">seu código</span>.
           </h2>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
           {protocolos.map(({ icon: Icon, title, desc, tags }) => (
-            <article key={title} className="group relative rounded-3xl glass p-8 hover:border-primary/40 transition overflow-hidden">
-              <div className="absolute -top-20 -right-20 h-48 w-48 rounded-full bg-primary/10 blur-3xl group-hover:bg-primary/20 transition" />
-              <Icon className="h-8 w-8 text-accent mb-8" />
-              <h3 className="font-display text-3xl mb-3">{title}</h3>
-              <p className="text-muted-foreground leading-relaxed mb-6">{desc}</p>
-              <div className="flex flex-wrap gap-2">
+            <article key={title} className="group rounded-2xl border border-border bg-card p-7 hover:border-primary/40 hover:shadow-soft transition-all">
+              <div className="h-10 w-10 rounded-lg bg-primary/10 grid place-items-center mb-6">
+                <Icon className="h-5 w-5 text-primary" />
+              </div>
+              <h3 className="font-display text-xl font-semibold mb-2">{title}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-6">{desc}</p>
+              <div className="flex flex-wrap gap-1.5">
                 {tags.map((t) => (
-                  <span key={t} className="text-xs font-mono px-2.5 py-1 rounded-md bg-secondary text-primary border border-primary/20">
+                  <span key={t} className="text-[11px] font-mono px-2 py-0.5 rounded-md bg-secondary text-foreground border border-border">
                     {t}
                   </span>
                 ))}
@@ -144,43 +127,43 @@ function Protocolos() {
 
 function Ciencia() {
   return (
-    <section id="ciencia" className="relative py-32 overflow-hidden">
+    <section id="ciencia" className="py-24 lg:py-32 border-t border-border bg-subtle">
       <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-16 items-center">
         <div className="relative">
           <img
             src={performance}
-            alt="DNA brilhante envolvendo silhueta atlética"
+            alt="DNA envolvendo silhueta atlética"
             width={1024}
             height={1280}
             loading="lazy"
-            className="rounded-3xl border border-primary/20 shadow-glow"
+            className="rounded-2xl border border-border shadow-elevated"
           />
-          <div className="absolute top-6 right-6 glass rounded-2xl px-4 py-3">
-            <div className="text-xs text-muted-foreground">VO₂ máx. estimado</div>
-            <div className="font-display text-3xl text-gradient">62 ml/kg</div>
+          <div className="absolute top-5 right-5 rounded-xl border border-border bg-background px-4 py-3 shadow-soft">
+            <div className="text-[10px] font-mono uppercase tracking-widest text-muted-foreground">VO₂ máx.</div>
+            <div className="font-display font-semibold text-2xl text-gradient">62 ml/kg</div>
           </div>
         </div>
         <div>
-          <div className="text-xs uppercase tracking-[0.25em] text-primary mb-4">Ciência aplicada</div>
-          <h2 className="font-display text-5xl md:text-6xl leading-tight mb-8">
+          <div className="text-xs font-medium uppercase tracking-[0.2em] text-primary mb-4">Ciência aplicada</div>
+          <h2 className="font-display text-4xl md:text-5xl font-semibold leading-tight tracking-tight mb-6">
             Mais de <span className="text-gradient">120 marcadores</span> genéticos analisados.
           </h2>
-          <p className="text-muted-foreground leading-relaxed mb-10 text-lg">
+          <p className="text-muted-foreground leading-relaxed mb-8">
             Sequenciamos regiões-chave do seu genoma em laboratório certificado e cruzamos com a literatura mais atual em
             nutrigenômica, dermatogenética e fisiologia do exercício.
           </p>
-          <ul className="space-y-4">
+          <ul className="space-y-3">
             {[
               "Painel completo de SNPs validados clinicamente",
               "Relatório interativo com explicação por gene",
               "Acompanhamento com equipe médica e nutricional",
               "Dados criptografados — você é o dono da sua informação",
             ].map((t) => (
-              <li key={t} className="flex items-start gap-3">
-                <div className="mt-1 h-5 w-5 rounded-full bg-gradient-primary grid place-items-center flex-shrink-0">
+              <li key={t} className="flex items-start gap-3 text-sm">
+                <div className="mt-0.5 h-5 w-5 rounded-full bg-primary grid place-items-center flex-shrink-0">
                   <Check className="h-3 w-3 text-primary-foreground" />
                 </div>
-                <span>{t}</span>
+                <span className="text-foreground">{t}</span>
               </li>
             ))}
           </ul>
@@ -198,22 +181,23 @@ const steps = [
 
 function Processo() {
   return (
-    <section id="processo" className="py-32">
+    <section id="processo" className="py-24 lg:py-32 border-t border-border">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="text-center max-w-2xl mx-auto mb-20">
-          <div className="text-xs uppercase tracking-[0.25em] text-primary mb-4">Processo</div>
-          <h2 className="font-display text-5xl md:text-6xl">Simples como uma <span className="italic text-gradient">amostra</span>.</h2>
+        <div className="text-center max-w-2xl mx-auto mb-16">
+          <div className="text-xs font-medium uppercase tracking-[0.2em] text-primary mb-4">Processo</div>
+          <h2 className="font-display text-4xl md:text-5xl font-semibold tracking-tight">Simples como uma <span className="text-gradient">amostra</span>.</h2>
         </div>
-        <div className="grid md:grid-cols-3 gap-6 relative">
-          <div className="hidden md:block absolute top-16 left-[16%] right-[16%] h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
+        <div className="grid md:grid-cols-3 gap-6">
           {steps.map(({ n, icon: Icon, title, desc }) => (
-            <div key={n} className="relative text-center">
-              <div className="relative mx-auto h-32 w-32 rounded-full glass grid place-items-center mb-8 shadow-glow">
-                <Icon className="h-10 w-10 text-accent" />
-                <span className="absolute -top-2 -right-2 h-9 w-9 rounded-full bg-gradient-primary text-primary-foreground font-display text-sm grid place-items-center">{n}</span>
+            <div key={n} className="rounded-2xl border border-border bg-card p-7">
+              <div className="flex items-center justify-between mb-6">
+                <div className="h-11 w-11 rounded-lg bg-primary/10 grid place-items-center">
+                  <Icon className="h-5 w-5 text-primary" />
+                </div>
+                <span className="font-mono text-xs text-muted-foreground">{n}</span>
               </div>
-              <h3 className="font-display text-2xl mb-3">{title}</h3>
-              <p className="text-muted-foreground max-w-xs mx-auto">{desc}</p>
+              <h3 className="font-display text-xl font-semibold mb-2">{title}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">{desc}</p>
             </div>
           ))}
         </div>
@@ -223,67 +207,52 @@ function Processo() {
 }
 
 const planos = [
-  {
-    name: "Essencial",
-    price: "R$ 1.290",
-    desc: "Foco em emagrecimento e metabolismo.",
-    features: ["40+ marcadores", "Plano nutricional genético", "Relatório digital", "1 consulta de devolutiva"],
-  },
-  {
-    name: "Performance",
-    price: "R$ 1.890",
-    desc: "Tudo do Essencial + treino e recuperação.",
-    features: ["80+ marcadores", "Protocolo de treino", "Suplementação personalizada", "2 consultas de acompanhamento"],
-    highlight: true,
-  },
-  {
-    name: "Signature",
-    price: "R$ 2.690",
-    desc: "Mapa completo: estética, peso e performance.",
-    features: ["120+ marcadores", "Protocolo estético dermatológico", "Acesso anual à plataforma", "Acompanhamento trimestral"],
-  },
+  { name: "Essencial", price: "R$ 1.290", desc: "Foco em emagrecimento e metabolismo.", features: ["40+ marcadores", "Plano nutricional genético", "Relatório digital", "1 consulta de devolutiva"] },
+  { name: "Performance", price: "R$ 1.890", desc: "Tudo do Essencial + treino e recuperação.", features: ["80+ marcadores", "Protocolo de treino", "Suplementação personalizada", "2 consultas de acompanhamento"], highlight: true },
+  { name: "Signature", price: "R$ 2.690", desc: "Mapa completo: estética, peso e performance.", features: ["120+ marcadores", "Protocolo estético dermatológico", "Acesso anual à plataforma", "Acompanhamento trimestral"] },
 ];
 
 function Planos() {
   return (
-    <section id="planos" className="relative py-32 overflow-hidden">
-      <div className="absolute inset-0 bg-hero opacity-60" />
-      <div className="relative mx-auto max-w-7xl px-6">
-        <div className="text-center max-w-2xl mx-auto mb-20">
-          <div className="text-xs uppercase tracking-[0.25em] text-primary mb-4">Planos</div>
-          <h2 className="font-display text-5xl md:text-6xl">Escolha sua <span className="italic text-gradient">jornada</span>.</h2>
+    <section id="planos" className="py-24 lg:py-32 border-t border-border bg-subtle">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="text-center max-w-2xl mx-auto mb-16">
+          <div className="text-xs font-medium uppercase tracking-[0.2em] text-primary mb-4">Planos</div>
+          <h2 className="font-display text-4xl md:text-5xl font-semibold tracking-tight">Escolha sua <span className="text-gradient">jornada</span>.</h2>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
           {planos.map((p) => (
             <div
               key={p.name}
-              className={`rounded-3xl p-8 flex flex-col ${
+              className={`rounded-2xl p-8 flex flex-col border transition-all ${
                 p.highlight
-                  ? "bg-gradient-primary text-primary-foreground shadow-gold scale-[1.03]"
-                  : "glass"
+                  ? "border-primary bg-card shadow-primary"
+                  : "border-border bg-card hover:shadow-soft"
               }`}
             >
               <div className="flex items-center justify-between">
-                <h3 className="font-display text-2xl">{p.name}</h3>
+                <h3 className="font-display text-xl font-semibold">{p.name}</h3>
                 {p.highlight && (
-                  <span className="text-[10px] uppercase tracking-widest bg-background/20 px-2 py-1 rounded-full">Popular</span>
+                  <span className="text-[10px] font-medium uppercase tracking-widest bg-primary text-primary-foreground px-2 py-1 rounded-md">Popular</span>
                 )}
               </div>
-              <p className={`mt-2 text-sm ${p.highlight ? "text-primary-foreground/80" : "text-muted-foreground"}`}>{p.desc}</p>
-              <div className="font-display text-5xl mt-6">{p.price}</div>
-              <ul className="mt-8 space-y-3 flex-1">
+              <p className="mt-2 text-sm text-muted-foreground">{p.desc}</p>
+              <div className="mt-6">
+                <span className="font-display font-semibold text-4xl tracking-tight">{p.price}</span>
+              </div>
+              <ul className="mt-6 space-y-3 flex-1">
                 {p.features.map((f) => (
-                  <li key={f} className="flex items-start gap-2 text-sm">
-                    <Check className={`h-4 w-4 mt-0.5 ${p.highlight ? "text-primary-foreground" : "text-accent"}`} />
-                    {f}
+                  <li key={f} className="flex items-start gap-2.5 text-sm">
+                    <Check className="h-4 w-4 mt-0.5 text-primary flex-shrink-0" />
+                    <span className="text-foreground">{f}</span>
                   </li>
                 ))}
               </ul>
               <button
-                className={`mt-8 rounded-full py-3 font-medium transition ${
+                className={`mt-8 rounded-lg py-2.5 text-sm font-medium transition-colors ${
                   p.highlight
-                    ? "bg-background text-foreground hover:bg-background/90"
-                    : "bg-gradient-primary text-primary-foreground shadow-glow hover:shadow-gold"
+                    ? "bg-primary text-primary-foreground hover:bg-primary/90"
+                    : "border border-border bg-background hover:bg-secondary text-foreground"
                 }`}
               >
                 Quero este plano
@@ -298,19 +267,18 @@ function Planos() {
 
 function CTA() {
   return (
-    <section className="py-32">
+    <section className="py-24 lg:py-32 border-t border-border">
       <div className="mx-auto max-w-5xl px-6">
-        <div className="relative overflow-hidden rounded-[2.5rem] p-12 md:p-20 text-center border border-primary/30">
-          <img src={lab} alt="" aria-hidden width={1280} height={1024} loading="lazy" className="absolute inset-0 h-full w-full object-cover opacity-25" />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/80 to-background" />
+        <div className="relative overflow-hidden rounded-3xl border border-border bg-card p-12 md:p-20 text-center">
+          <img src={lab} alt="" aria-hidden width={1280} height={1024} loading="lazy" className="absolute inset-0 h-full w-full object-cover opacity-[0.08]" />
           <div className="relative">
-            <h2 className="font-display text-5xl md:text-7xl leading-tight">
-              Pare de seguir <br /> <span className="italic text-gradient">a média</span>.
+            <h2 className="font-display text-4xl md:text-6xl font-semibold leading-tight tracking-tight">
+              Pare de seguir <span className="text-gradient">a média</span>.
             </h2>
-            <p className="mt-6 text-lg text-muted-foreground max-w-xl mx-auto">
+            <p className="mt-5 text-lg text-muted-foreground max-w-xl mx-auto">
               Seu corpo já tem as respostas. Nós só ajudamos você a ouvi-las.
             </p>
-            <a href="#planos" className="mt-10 inline-flex items-center gap-2 rounded-full bg-gradient-primary px-8 py-4 font-medium text-primary-foreground shadow-glow hover:shadow-gold transition">
+            <a href="#planos" className="mt-8 inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors shadow-primary">
               Decifrar meu DNA
               <ArrowRight className="h-4 w-4" />
             </a>
@@ -323,19 +291,19 @@ function CTA() {
 
 function Footer() {
   return (
-    <footer className="border-t border-border py-12">
+    <footer className="border-t border-border py-10">
       <div className="mx-auto max-w-7xl px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-        <div className="flex items-center gap-2">
-          <div className="h-7 w-7 rounded-full bg-gradient-primary grid place-items-center">
+        <div className="flex items-center gap-2.5">
+          <div className="h-7 w-7 rounded-lg bg-primary grid place-items-center">
             <Dna className="h-3.5 w-3.5 text-primary-foreground" />
           </div>
-          <span className="font-display text-lg text-foreground">GENOMA</span>
-          <span className="ml-3">© 2026 — Todos os direitos reservados</span>
+          <span className="font-display font-semibold text-foreground">GENOMA</span>
+          <span className="ml-3">© 2026</span>
         </div>
         <div className="flex gap-6">
-          <a href="#" className="hover:text-foreground">Privacidade</a>
-          <a href="#" className="hover:text-foreground">Termos</a>
-          <a href="#" className="hover:text-foreground">Contato</a>
+          <a href="#" className="hover:text-foreground transition-colors">Privacidade</a>
+          <a href="#" className="hover:text-foreground transition-colors">Termos</a>
+          <a href="#" className="hover:text-foreground transition-colors">Contato</a>
         </div>
       </div>
     </footer>
@@ -344,7 +312,7 @@ function Footer() {
 
 function Index() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-background">
       <Nav />
       <Hero />
       <Protocolos />
