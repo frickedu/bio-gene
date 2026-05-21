@@ -40,7 +40,7 @@ function Hero() {
         <div className="lg:col-span-7 space-y-8">
           <div className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary px-3 py-1 text-xs font-medium text-muted-foreground">
             <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-            Genética de precisão — 2026
+            Genética personalzada
           </div>
           <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-semibold leading-[1.05] tracking-tight">
             Sua genética.<br />
