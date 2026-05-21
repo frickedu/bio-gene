@@ -260,7 +260,7 @@ function Index() {
       <Protocolos />
       <Ciencia />
       <Processo />
-      <Planos />
+      
       <CTA />
       <Footer />
     </main>
