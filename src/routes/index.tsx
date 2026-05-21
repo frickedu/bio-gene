@@ -220,7 +220,7 @@ function CTA() {
             <p className="mt-5 text-lg text-muted-foreground max-w-xl mx-auto">
               Seu corpo já tem as respostas. Nós só ajudamos você a ouvi-las.
             </p>
-            <a href="#planos" className="mt-8 inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors shadow-primary">
+            <a href="#protocolos" className="mt-8 inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors shadow-primary">
               Decifrar meu DNA
               <ArrowRight className="h-4 w-4" />
             </a>
