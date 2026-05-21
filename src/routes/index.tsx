@@ -22,7 +22,7 @@ function Nav() {
           <a href="#protocolos" className="hover:text-foreground transition-colors">Protocolos</a>
           <a href="#ciencia" className="hover:text-foreground transition-colors">Ciência</a>
           <a href="#processo" className="hover:text-foreground transition-colors">Processo</a>
-          <a href="#planos" className="hover:text-foreground transition-colors">Planos</a>
+          
         </nav>
         <a href="#planos" className="inline-flex items-center gap-1.5 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors">
           Agendar análise
