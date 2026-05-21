@@ -16,7 +16,7 @@ function Nav() {
           <div className="h-8 w-8 rounded-lg bg-primary grid place-items-center">
             <Dna className="h-4 w-4 text-primary-foreground" />
           </div>
-          <span className="font-display font-semibold text-lg tracking-tight">GENOMA</span>
+          <span className="font-display font-semibold text-lg tracking-tight">BDL <span className="text-muted-foreground font-normal">— BIOGENE</span></span>
         </a>
         <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
           <a href="#protocolos" className="hover:text-foreground transition-colors">Protocolos</a>
@@ -297,7 +297,7 @@ function Footer() {
           <div className="h-7 w-7 rounded-lg bg-primary grid place-items-center">
             <Dna className="h-3.5 w-3.5 text-primary-foreground" />
           </div>
-          <span className="font-display font-semibold text-foreground">GENOMA</span>
+          <span className="font-display font-semibold text-foreground">BDL <span className="text-muted-foreground font-normal">— BIOGENE</span></span>
           <span className="ml-3">© 2026</span>
         </div>
         <div className="flex gap-6">
