@@ -47,7 +47,7 @@ function Hero() {
             <span className="text-gradient">Seu protocolo.</span>
           </h1>
           <p className="text-lg text-muted-foreground max-w-xl leading-relaxed">
-            Identificamos os genes que regulam seu metabolismo, sua estética e sua performance.
+            Identificamos os principais genes que regulam seu metabolismo, sua estética e sua performance.
             Cada protocolo é desenhado a partir do que está escrito no seu DNA — não em um manual genérico.
           </p>
           <div className="flex flex-wrap gap-3 pt-1">
