@@ -22,10 +22,10 @@ function Nav() {
           <a href="#protocolos" className="hover:text-foreground transition-colors">Protocolos</a>
           <a href="#ciencia" className="hover:text-foreground transition-colors">Ciência</a>
           <a href="#processo" className="hover:text-foreground transition-colors">Processo</a>
-          <a href="#planos" className="hover:text-foreground transition-colors">Planos</a>
+          
         </nav>
-        <a href="#planos" className="inline-flex items-center gap-1.5 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors">
-          Agendar análise
+        <a href="#protocolos" className="inline-flex items-center gap-1.5 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors">
+          Ver protocolos
         </a>
       </div>
     </header>
@@ -51,7 +51,7 @@ function Hero() {
             Cada protocolo é desenhado a partir do que está escrito no seu DNA — não em um manual genérico.
           </p>
           <div className="flex flex-wrap gap-3 pt-1">
-            <a href="#planos" className="group inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors shadow-primary">
+            <a href="#protocolos" className="group inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors shadow-primary">
               Iniciar minha análise
               <ArrowRight className="h-4 w-4 group-hover:translate-x-0.5 transition-transform" />
             </a>
@@ -206,64 +206,6 @@ function Processo() {
   );
 }
 
-const planos = [
-  { name: "Essencial", price: "R$ 1.290", desc: "Foco em emagrecimento e metabolismo.", features: ["40+ marcadores", "Plano nutricional genético", "Relatório digital", "1 consulta de devolutiva"] },
-  { name: "Performance", price: "R$ 1.890", desc: "Tudo do Essencial + treino e recuperação.", features: ["80+ marcadores", "Protocolo de treino", "Suplementação personalizada", "2 consultas de acompanhamento"], highlight: true },
-  { name: "Signature", price: "R$ 2.690", desc: "Mapa completo: estética, peso e performance.", features: ["120+ marcadores", "Protocolo estético dermatológico", "Acesso anual à plataforma", "Acompanhamento trimestral"] },
-];
-
-function Planos() {
-  return (
-    <section id="planos" className="py-24 lg:py-32 border-t border-border bg-subtle">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <div className="text-xs font-medium uppercase tracking-[0.2em] text-primary mb-4">Planos</div>
-          <h2 className="font-display text-4xl md:text-5xl font-semibold tracking-tight">Escolha sua <span className="text-gradient">jornada</span>.</h2>
-        </div>
-        <div className="grid md:grid-cols-3 gap-6">
-          {planos.map((p) => (
-            <div
-              key={p.name}
-              className={`rounded-2xl p-8 flex flex-col border transition-all ${
-                p.highlight
-                  ? "border-primary bg-card shadow-primary"
-                  : "border-border bg-card hover:shadow-soft"
-              }`}
-            >
-              <div className="flex items-center justify-between">
-                <h3 className="font-display text-xl font-semibold">{p.name}</h3>
-                {p.highlight && (
-                  <span className="text-[10px] font-medium uppercase tracking-widest bg-primary text-primary-foreground px-2 py-1 rounded-md">Popular</span>
-                )}
-              </div>
-              <p className="mt-2 text-sm text-muted-foreground">{p.desc}</p>
-              <div className="mt-6">
-                <span className="font-display font-semibold text-4xl tracking-tight">{p.price}</span>
-              </div>
-              <ul className="mt-6 space-y-3 flex-1">
-                {p.features.map((f) => (
-                  <li key={f} className="flex items-start gap-2.5 text-sm">
-                    <Check className="h-4 w-4 mt-0.5 text-primary flex-shrink-0" />
-                    <span className="text-foreground">{f}</span>
-                  </li>
-                ))}
-              </ul>
-              <button
-                className={`mt-8 rounded-lg py-2.5 text-sm font-medium transition-colors ${
-                  p.highlight
-                    ? "bg-primary text-primary-foreground hover:bg-primary/90"
-                    : "border border-border bg-background hover:bg-secondary text-foreground"
-                }`}
-              >
-                Quero este plano
-              </button>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
 
 function CTA() {
   return (
@@ -278,7 +220,7 @@ function CTA() {
             <p className="mt-5 text-lg text-muted-foreground max-w-xl mx-auto">
               Seu corpo já tem as respostas. Nós só ajudamos você a ouvi-las.
             </p>
-            <a href="#planos" className="mt-8 inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors shadow-primary">
+            <a href="#protocolos" className="mt-8 inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors shadow-primary">
               Decifrar meu DNA
               <ArrowRight className="h-4 w-4" />
             </a>
@@ -318,7 +260,7 @@ function Index() {
       <Protocolos />
       <Ciencia />
       <Processo />
-      <Planos />
+      
       <CTA />
       <Footer />
     </main>
