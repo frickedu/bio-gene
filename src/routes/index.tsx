@@ -51,7 +51,7 @@ function Hero() {
             Cada protocolo é desenhado a partir do que está escrito no seu DNA — não em um manual genérico.
           </p>
           <div className="flex flex-wrap gap-3 pt-1">
-            <a href="#planos" className="group inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors shadow-primary">
+            <a href="#protocolos" className="group inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors shadow-primary">
               Iniciar minha análise
               <ArrowRight className="h-4 w-4 group-hover:translate-x-0.5 transition-transform" />
             </a>
